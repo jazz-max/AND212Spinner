@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AND-2.1.2-Spinner</string>
+    <string name="show_addr">Показать адрес</string>
+    <string-array name="countries">
+        <item name="r_cities">Россия</item>
+        <item name="u_cities">Украина</item>
+        <item name="b_cities">Белоруссия</item>
+    </string-array>
+    <string-array name="r_cities">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Казань</item>
+    </string-array>
+    <string-array name="u_cities">
+        <item>Киев</item>
+        <item>Одесса</item>
+        <item>Харьков</item>
+    </string-array>
+    <string-array name="b_cities">
+        <item>Минск</item>
+        <item>Гомель</item>
+        <item>Торжок</item>
+    </string-array>
+</resources>
