@@ -2,9 +2,9 @@
     <string name="app_name">AND-2.1.2-Spinner</string>
     <string name="show_addr">Показать адрес</string>
     <string-array name="countries">
-        <item name="r_cities">Россия</item>
-        <item name="u_cities">Украина</item>
-        <item name="b_cities">Белоруссия</item>
+        <item>Россия</item>
+        <item>Украина</item>
+        <item>Белоруссия</item>
     </string-array>
     <string-array name="r_cities">
         <item>Москва</item>

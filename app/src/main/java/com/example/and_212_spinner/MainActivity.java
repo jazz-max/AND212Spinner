@@ -47,11 +47,12 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 1; i <= 50; i++) {
             houseNumbers[i - 1] = i;
         }
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, houseNumbers);
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, houseNumbers);
         mHouseNumberSpinner.setAdapter(adapter);
     }
 
     private void initSpinnerCountries() {
+
         ArrayAdapter<CharSequence> adapterCountries = ArrayAdapter.createFromResource(this, R.array.countries, android.R.layout.simple_spinner_item);
         adapterCountries.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mCountriesSpinner.setAdapter(adapterCountries);
@@ -59,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mCountriesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String[] countries = getResources().getStringArray(R.array.countries);
-                initSpinnerCities(countries[i]);
+                initSpinnerCities(i);
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -68,16 +68,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initSpinnerCities(String country) {
-        ArrayAdapter<CharSequence> adapter = null;
+    private void initSpinnerCities(int country) {
+        ArrayAdapter<CharSequence> adapter ;
         switch (country) {
-            case "Россия":
+            case Country.RUSSIA:
                 adapter = ArrayAdapter.createFromResource(this, R.array.r_cities, android.R.layout.simple_spinner_item);
                 break;
-            case "Украина":
+            case Country.UKRAINE:
                 adapter = ArrayAdapter.createFromResource(this, R.array.u_cities, android.R.layout.simple_spinner_item);
                 break;
-            case "Белоруссия":
+            case Country.BELARUS:
                 adapter = ArrayAdapter.createFromResource(this, R.array.b_cities, android.R.layout.simple_spinner_item);
                 break;
             default:
